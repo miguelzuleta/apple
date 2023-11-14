@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>EPP</title>
+	<style>
+		*, *:before, *:after {
+		  margin: 0;
+		  padding: 0;
+		}
+
+		body {
+		  background-color: #000;
+		  display: flex;
+		  padding: 25px;
+		  justify-content: center;
+		}
+
+		#epp {
+		  background-color: #fff;
+		  padding: 12.5px 25px;
+		  width: 600px;
+		  box-sizing: border-box;
+		  border-radius: 10px;
+		  color: #111;
+		  font-size: 14px;
+		  letter-spacing: 0.015em;
+		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		.row {
+		  display: flex;
+		  padding: 25px 12.5px;
+		  border: 1px solid #ddd;
+		  border-width: 0 0 1px;
+		  align-items: center;
+		}
+		.row:last-child {
+		  border: none;
+		}
+		.row.header {
+		  font-weight: bold;
+		  font-size: 16px;
+		}
+		.row .product {
+		  width: 50%;
+		}
+		.row .count {
+		  width: 25%;
+		  text-align: center;
+		}
+		.row .all-gone {
+		  color: #bbb;
+		  text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+	<article id="epp">
+		<div class="row header">
+			<div class="product">Product Discount</div>
+			<div class="count">25%</div>
+			<div class="count">15%</div>
+		</div>
+	</article>
+	<script src="https://miguelzuleta.com/append/index.js"></script>
+	<script>
+		let remainingCount = count => count === 0 ? 'count all-gone' : 'count';
+
+		fetch('epp.json').then(data => data.json()).then(data => {
+			for (let key in data) {
+				let eppData = data[key];
+				let allGone = (eppData.p === 0) && (eppData.ff === 0);
+				
+				append({
+					parent: '#epp',
+					child: [{
+						class: 'row',
+						child: [{
+							class: `product${allGone ? ' all-gone' : ''}`,
+							text: eppData.name
+						}, {
+							class: remainingCount(eppData.p),
+							text: `${eppData.p}`
+						}, {
+							class: remainingCount(eppData.ff),
+							text: `${eppData.ff}`
+						}]
+					}]
+				})
+			}
+		})
+	</script>
+</body>
+</html>
