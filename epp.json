@@ -1,77 +1,77 @@
 {
   "mac": {
     "name": "Mac",
-    "p": 0,
-    "ff": 6
+    "personal": 0,
+    "friends": 6
   },
   "appleDisplay": {
     "name": "Apple Display",
-    "p": 1,
-    "ff": 5
+    "personal": 1,
+    "friends": 5
   },
   "iPad": {
     "name": "iPad",
-    "p": 0,
-    "ff": 7
+    "personal": 0,
+    "friends": 7
   },
   "iPhone": {
     "name": "iPhone",
-    "p": 0,
-    "ff": 0
+    "personal": 0,
+    "friends": 0
   },
   "appleWatch": {
     "name": "Apple Watch",
-    "p": 0,
-    "ff": 6
+    "personal": 0,
+    "friends": 6
   },
   "AppleTV": {
     "name": "Apple TV",
-    "p": 4,
-    "ff": 10
+    "personal": 4,
+    "friends": 10
   },
   "homepod": {
     "name": "HomePod (includes HomePod mini)",
-    "p": 5,
-    "ff": 10
+    "personal": 5,
+    "friends": 10
   },
   "airpods": {
     "name": "AirPods (includes AirPods Pro)",
-    "p": 0,
-    "ff": 10
+    "personal": 0,
+    "friends": 10
   },
   "airpodsMax": {
     "name": "iPad",
-    "p": 1,
-    "ff": 10
+    "personal": 1,
+    "friends": 10
   },
   "airTag1": {
     "name": "AirTag (1 pack)",
-    "p": 10,
-    "ff": 10
+    "personal": 10,
+    "friends": 10
   },
   "airTag4": {
     "name": "AirTag (4 pack)",
-    "p": 0,
-    "ff": 1
+    "personal": 0,
+    "friends": 1
   },
   "airTagHermes": {
     "name": "AirTag Hermes",
-    "p": 3,
-    "ff": 3
+    "personal": 3,
+    "friends": 3
   },
   "appleAccessories": {
     "name": "Apple accessories (includes Beats products)",
-    "p": 8,
-    "ff": 8
+    "personal": 8,
+    "friends": 8
   },
   "appleWatchAccessories": {
     "name": "Apple Watch Accessories (includes bands and chargers)",
-    "p": 9,
-    "ff": 10
+    "personal": 9,
+    "friends": 10
   },
   "thirdParty": {
     "name": "Third-party accessories",
-    "p": 10,
-    "ff": 9
+    "personal": 10,
+    "friends": 9
   }
 }

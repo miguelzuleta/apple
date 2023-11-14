@@ -50,7 +50,7 @@
 		  width: 25%;
 		  text-align: center;
 		}
-		.row .all-gone {
+		.row .gone {
 		  color: #bbb;
 		}
 	</style>
@@ -65,26 +65,27 @@
 	</article>
 	<script src="https://miguelzuleta.com/append/index.js"></script>
 	<script>
-		let remainingCount = count => count === 0 ? 'count all-gone' : 'count';
+		let countClass = count => count === 0 ? 'count gone' : 'count';
 
 		fetch('epp.json').then(data => data.json()).then(data => {
 			for (let key in data) {
-				let eppData = data[key];
-				let allGone = (eppData.p === 0) && (eppData.ff === 0);
+				let personal = data[key].personal;
+				let friends = data[key].friends;
+				let allGone = (personal === 0) && (friends === 0);
 				
 				append({
 					parent: '#epp',
 					child: [{
 						class: 'row',
 						child: [{
-							class: `product${allGone ? ' all-gone' : ''}`,
-							text: eppData.name
+							class: `product${allGone ? ' gone' : ''}`,
+							text: data[key].name
 						}, {
-							class: remainingCount(eppData.p),
-							text: `${eppData.p}`
+							class: countClass(personal),
+							text: `${personal}`
 						}, {
-							class: remainingCount(eppData.ff),
-							text: `${eppData.ff}`
+							class: countClass(friends),
+							text: `${friends}`
 						}]
 					}]
 				})
