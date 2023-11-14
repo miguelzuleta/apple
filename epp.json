@@ -1,17 +1,77 @@
 {
-  "one": {
-    "name": "yadda",
-    "p": 2,
-    "ff": 4
+  "mac": {
+    "name": "Mac",
+    "p": 0,
+    "ff": 6
   },
-  "two": {
-    "name": "yadda dooos",
-    "p": 32,
-    "ff": 42
+  "appleDisplay": {
+    "name": "Apple Display",
+    "p": 1,
+    "ff": 5
   },
-  "tree": {
-    "name": "sss3333",
-    "p": 21,
-    "ff": 554
+  "iPad": {
+    "name": "iPad",
+    "p": 0,
+    "ff": 7
+  },
+  "iPhone": {
+    "name": "iPhone",
+    "p": 0,
+    "ff": 0
+  },
+  "appleWatch": {
+    "name": "Apple Watch",
+    "p": 0,
+    "ff": 6
+  },
+  "AppleTV": {
+    "name": "Apple TV",
+    "p": 4,
+    "ff": 10
+  },
+  "homepod": {
+    "name": "HomePod (includes HomePod mini)",
+    "p": 5,
+    "ff": 10
+  },
+  "airpods": {
+    "name": "AirPods (includes AirPods Pro)",
+    "p": 0,
+    "ff": 10
+  },
+  "airpodsMax": {
+    "name": "iPad",
+    "p": 1,
+    "ff": 10
+  },
+  "airTag1": {
+    "name": "AirTag (1 pack)",
+    "p": 10,
+    "ff": 10
+  },
+  "airTag4": {
+    "name": "AirTag (4 pack)",
+    "p": 0,
+    "ff": 1
+  },
+  "airTagHermes": {
+    "name": "AirTag Hermes",
+    "p": 3,
+    "ff": 3
+  },
+  "appleAccessories": {
+    "name": "Apple accessories (includes Beats products)",
+    "p": 8,
+    "ff": 8
+  },
+  "appleWatchAccessories": {
+    "name": "Apple Watch Accessories (includes bands and chargers)",
+    "p": 9,
+    "ff": 10
+  },
+  "thirdParty": {
+    "name": "Third-party accessories",
+    "p": 10,
+    "ff": 9
   }
 }
