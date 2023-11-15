@@ -1,0 +1,14 @@
+{
+  "name": "apple-main",
+  "version": "1.0.0",
+  "description": "epp",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 4321"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
