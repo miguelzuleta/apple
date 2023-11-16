@@ -23,7 +23,6 @@
 		  width: 600px;
 		  box-sizing: border-box;
 		  border-radius: 10px;
-		  color: #111;
 		  font-size: 14px;
 		  letter-spacing: 0.015em;
 		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -31,10 +30,15 @@
 
 		.row {
 		  display: flex;
-		  padding: 25px 12px;
+		  padding: 0 12px;
 		  border: 1px solid #ddd;
 		  border-width: 0 0 1px;
 		  align-items: center;
+		}
+
+		.row * {
+			color: #111;
+			padding: 25px 0;
 		}
 		
 		.row:last-child {
@@ -51,6 +55,12 @@
 		
 		.row .product {
 		  width: 50%;
+		  text-decoration: none;
+		}
+
+		.row .product:hover {
+			color: #0071E3;
+			text-decoration: underline;
 		}
 		
 		.row .count {
@@ -80,14 +90,21 @@
 				let personal = elem.personal;
 				let friends = elem.friends;
 				let allGone = (personal === 0) && (friends === 0) ? ' gone' : '';
+
+				// console.log(elem.site)
 				
 				append({
 					parent: '#epp',
 					child: [{
 						class: 'row',
 						child: [{
-							class: `product${allGone}`,
-							text: elem.name
+							elem: 'a',
+							text: elem.name,
+							attrs: {
+								class: `product${allGone}`,
+								href: `https://www.apple.com/${elem.site}/`,
+								target: '_blank'
+							}
 						}, {
 							class: countClass(personal),
 							text: `${personal}`
