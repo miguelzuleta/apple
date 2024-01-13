@@ -2,7 +2,7 @@
   "items": [{
     "name": "Mac",
     "personal": 0,
-    "friends": 6,
+    "friends": 10,
     "site": "mac"
   },{
     "name": "Apple Display",
@@ -11,33 +11,33 @@
     "site": "displays"
   },{
     "name": "iPad",
-    "personal": 0,
-    "friends": 7,
+    "personal": 1,
+    "friends": 10,
     "site": "ipad"
   },{
     "name": "iPhone",
     "personal": 0,
-    "friends": 0,
+    "friends": 10,
     "site": "iphone"
   },{
     "name": "Apple Watch",
-    "personal": 0,
-    "friends": 5,
+    "personal": 1,
+    "friends": 10,
     "site": "watch"
   },{
     "name": "Apple TV",
-    "personal": 4,
+    "personal": 5,
     "friends": 10,
     "site": "tv-home"
   },{
     "name": "HomePod (includes HomePod mini)",
-    "personal": 4,
+    "personal": 5,
     "friends": 10,
     "site": "tv-home"
   },{
     "name": "AirPods (includes AirPods Pro)",
-    "personal": 0,
-    "friends": 8,
+    "personal": 1,
+    "friends": 10,
     "site": "airpods"
   },{
     "name": "AirPods Max",
@@ -51,8 +51,8 @@
     "site": "airtag"
   },{
     "name": "AirTag (4 pack)",
-    "personal": 0,
-    "friends": 1,
+    "personal": 1,
+    "friends": 2,
     "site": "airtag"
   },{
     "name": "AirTag Hermes",
@@ -61,18 +61,18 @@
     "site": "airtag"
   },{
     "name": "Apple accessories (includes Beats products)",
-    "personal": 8,
-    "friends": 8,
+    "personal": 10,
+    "friends": 10,
     "site": "shop/accessories/all"
   },{
     "name": "Apple Watch Accessories (includes bands and chargers)",
-    "personal": 9,
+    "personal": 10,
     "friends": 10,
     "site": "shop/watch/accessories"
   },{
     "name": "Third-party accessories",
     "personal": 10,
-    "friends": 9,
+    "friends": 10,
     "site": "shop/accessories/all/only-at-apple"
   }]
 }
