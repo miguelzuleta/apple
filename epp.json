@@ -75,6 +75,11 @@
     "friends": 10,
     "site": "shop/watch/accessories"
   },{
+    "name": "Apple Vision Pro accessories",
+    "personal": 10,
+    "friends": 0,
+    "site": "shop/vision/accessories"
+  },{
     "name": "Third-party accessories",
     "personal": 10,
     "friends": 9,
