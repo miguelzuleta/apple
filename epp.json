@@ -17,7 +17,7 @@
   },{
     "name": "iPhone",
     "personal": 0,
-    "friends": 8,
+    "friends": 5,
     "site": "iphone"
   },{
     "name": "Apple Watch",
@@ -66,8 +66,8 @@
     "site": "airtag"
   },{
     "name": "Apple accessories (includes Beats products)",
-    "personal": 10,
-    "friends": 10,
+    "personal": 5,
+    "friends": 0,
     "site": "shop/accessories/all"
   },{
     "name": "Apple Watch Accessories (includes bands and chargers)",
@@ -82,7 +82,7 @@
   },{
     "name": "Third-party accessories",
     "personal": 10,
-    "friends": 9,
+    "friends": 10,
     "site": "shop/accessories/all/only-at-apple"
   }]
 }
