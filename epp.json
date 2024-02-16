@@ -2,87 +2,70 @@
   "items": [{
     "name": "Mac",
     "personal": 0,
-    "friends": 10,
-    "site": "mac"
+    "friends": 10
   },{
     "name": "Apple Display",
     "personal": 1,
-    "friends": 5,
-    "site": "displays"
+    "friends": 5
   },{
     "name": "iPad",
     "personal": 1,
-    "friends": 10,
-    "site": "ipad"
+    "friends": 10
   },{
     "name": "iPhone",
     "personal": 0,
-    "friends": 4,
-    "site": "iphone"
+    "friends": 4
   },{
     "name": "Apple Watch",
     "personal": 1,
-    "friends": 10,
-    "site": "watch"
+    "friends": 10
   },{
     "name": "Apple Vision Pro",
     "personal": 1,
-    "friends": 0,
-    "site": "apple-vision-pro"
+    "friends": 0
   },{
     "name": "Apple TV",
     "personal": 5,
-    "friends": 10,
-    "site": "tv-home"
+    "friends": 10
   },{
     "name": "HomePod (includes HomePod mini)",
     "personal": 3,
-    "friends": 10,
-    "site": "tv-home"
+    "friends": 10
   },{
     "name": "AirPods (includes AirPods Pro)",
     "personal": 1,
-    "friends": 10,
-    "site": "airpods"
+    "friends": 10
   },{
     "name": "AirPods Max",
     "personal": 1,
-    "friends": 10,
-    "site": "airpods"
+    "friends": 10
   },{
     "name": "AirTag (1 pack)",
     "personal": 10,
-    "friends": 10,
-    "site": "airtag"
+    "friends": 10
   },{
     "name": "AirTag (4 pack)",
     "personal": 1,
-    "friends": 2,
-    "site": "airtag"
+    "friends": 2
   },{
     "name": "AirTag Hermes",
     "personal": 3,
-    "friends": 3,
-    "site": "airtag"
+    "friends": 3
   },{
     "name": "Apple accessories (includes Beats products)",
     "personal": 5,
-    "friends": 0,
-    "site": "shop/accessories/all"
+    "friends": 0
   },{
     "name": "Apple Watch Accessories (includes bands and chargers)",
     "personal": 10,
-    "friends": 10,
-    "site": "shop/watch/accessories"
+    "friends": 10
   },{
     "name": "Apple Vision Pro accessories",
     "personal": 10,
-    "friends": 0,
-    "site": "shop/vision/accessories"
+    "friends": 0
   },{
     "name": "Third-party accessories",
     "personal": 10,
-    "friends": 10,
-    "site": "shop/accessories/all/only-at-apple"
+    "friends": 10
   }]
 }

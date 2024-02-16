@@ -52,25 +52,24 @@
 		  position: sticky;
 		  top: 0;
 		}
+
+		.row.gone .count {
+			flex-grow: 1;
+		}
 		
 		.row .product {
 		  width: 50%;
 		  text-decoration: none;
-		}
-
-		.row:not(.header) .product:hover {
-			color: #0071E3;
-			text-decoration: underline;
 		}
 		
 		.row .count {
 		  width: 25%;
 		  text-align: center;
 		}
-		
-		.row .gone {
+
+		.row.gone *,
+		.gone {
 		  color: #bbb;
-		  pointer-events: none;
 		}
 	</style>
 </head>
@@ -90,27 +89,33 @@
 			data.items.forEach(elem => {
 				let personal = elem.personal;
 				let friends = elem.friends;
-				let allGone = (personal === 0) && (friends === 0) ? ' gone' : '';
-				
+				let allGone = (personal === 0) && (friends === 0);
+
+				let countSpecs = {
+					personal: {
+						class: countClass(personal),
+						text: `${personal}`
+					},
+					friends: {
+						class: countClass(friends),
+						text: `${friends}`
+					}
+				}
+
+				if (allGone) {
+					countSpecs.personal.text = 'Sold Out';
+					delete countSpecs.friends;
+				}
+
 				append({
 					parent: '#epp',
 					child: [{
-						class: 'row',
+						class: `row${allGone ? ' gone' : ''}`,
 						child: [{
-							elem: 'a',
-							text: elem.name,
-							attrs: {
-								class: `product${allGone}`,
-								href: `https://www.apple.com/${elem.site}/`,
-								target: '_blank'
-							}
-						}, {
-							class: countClass(personal),
-							text: `${personal}`
-						}, {
-							class: countClass(friends),
-							text: `${friends}`
-						}]
+							elem: 'p',
+							class: 'product',
+							text: elem.name
+						}, ...Object.values(countSpecs)]
 					}]
 				})
 			})
