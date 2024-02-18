@@ -37,8 +37,8 @@
 		}
 
 		.row * {
-			color: #111;
-			padding: 25px 0;
+		  color: #111;
+		  padding: 25px 0;
 		}
 		
 		.row:last-child {
@@ -54,12 +54,11 @@
 		}
 
 		.row.gone .count {
-			flex-grow: 1;
+		  flex-grow: 1;
 		}
 		
 		.row .product {
 		  width: 50%;
-		  text-decoration: none;
 		}
 		
 		.row .count {
@@ -101,7 +100,8 @@
 					<div class="row${allGone ? ' gone' : ''}">
 						<p class="product">${elem.name}</p>
 						${Object.keys(specs).map(key => {
-							return `<div class="count${elem[key] === 0 ? ' gone' : ''}">${specs[key]}</div>`
+							let itemGone = (elem[key] === 0) ? ' gone' : '';
+							return `<div class="count${itemGone}">${specs[key]}</div>`;
 						}).join('')}
 					</div>
 				`);
