@@ -57,16 +57,16 @@
 		  flex-grow: 1;
 		}
 		
-		.row .product {
+		.product {
 		  width: 50%;
 		}
 		
-		.row .count {
+		.count {
 		  width: 25%;
 		  text-align: center;
 		}
 
-		.row.gone *,
+		.gone *,
 		.gone {
 		  color: #bbb;
 		}
@@ -83,6 +83,8 @@
 	<script src="https://miguelzuleta.com/append/index.js"></script>
 	<script>
 		fetch('epp.json').then(data => data.json()).then(data => {
+			let productList = '';
+
 			data.items.forEach(elem => {
 				let specs = {
 					personal: elem.personal,
@@ -96,7 +98,7 @@
 					delete specs.friends;
 				}
 
-				append('#epp', `
+				productList += `
 					<div class="row${allGone ? ' gone' : ''}">
 						<p class="product">${elem.name}</p>
 						${Object.keys(specs).map(key => {
@@ -104,8 +106,10 @@
 							return `<div class="count${itemGone}">${specs[key]}</div>`;
 						}).join('')}
 					</div>
-				`);
+				`;
 			})
+
+			append('#epp', productList);
 		})
 	</script>
 </body>
