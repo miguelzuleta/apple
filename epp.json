@@ -2,10 +2,10 @@
   "items": [{
     "name": "Mac",
     "personal": 0,
-    "friends": 7
+    "friends": 6
   },{
     "name": "Apple Display",
-    "personal": 1,
+    "personal": 0,
     "friends": 5
   },{
     "name": "iPad",
