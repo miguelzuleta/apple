@@ -1,7 +1,7 @@
 {
   "items": [{
     "name": "Mac",
-    "personal": 1,
+    "personal": 0,
     "friends": 10
   },{
     "name": "Apple Display",
@@ -17,7 +17,7 @@
     "friends": 6
   },{
     "name": "Apple Watch",
-    "personal": 1,
+    "personal": 0,
     "friends": 10
   },{
     "name": "Apple Vision Pro",
