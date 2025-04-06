@@ -9,7 +9,7 @@
     "friends": 4
   },{
     "name": "iPad",
-    "personal": 0,
+    "personal": 1,
     "friends": 7
   },{
     "name": "iPhone",
@@ -22,7 +22,7 @@
   },{
     "name": "Apple Vision Pro",
     "personal": 1,
-    "friends": 0
+    "friends": 10
   },{
     "name": "Apple TV",
     "personal": 5,
@@ -49,8 +49,8 @@
     "friends": 2
   },{
     "name": "Apple accessories (includes Beats products)",
-    "personal": 7,
-    "friends": 10
+    "personal": 8,
+    "friends": 9
   },{
     "name": "Apple Watch Accessories (includes bands and chargers)",
     "personal": 10,
@@ -58,7 +58,7 @@
   },{
     "name": "Apple Vision Pro accessories",
     "personal": 10,
-    "friends": 0
+    "friends": 10
   },{
     "name": "Third-party accessories",
     "personal": 10,
