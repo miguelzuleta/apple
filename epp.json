@@ -2,7 +2,7 @@
   "items": [{
     "name": "Mac",
     "personal": 0,
-    "friends": 8
+    "friends": 7
   },{
     "name": "Apple Display",
     "personal": 0,
@@ -50,7 +50,7 @@
   },{
     "name": "Apple accessories (includes Beats products)",
     "personal": 8,
-    "friends": 9
+    "friends": 8
   },{
     "name": "Apple Watch Accessories (includes bands and chargers)",
     "personal": 10,
