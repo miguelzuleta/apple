@@ -82,7 +82,9 @@
 	</section>
 	<script src="https://miguelzuleta.com/append/index.js"></script>
 	<script>
-		fetch('epp.json').then(data => data.json()).then(data => {
+		let year = new Date().getFullYear();
+		
+		fetch(`epp-${year}.json`).then(data => data.json()).then(data => {
 			let productList = '';
 
 			data.items.forEach(elem => {
