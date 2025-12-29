@@ -1,24 +1,24 @@
 {
   "items": [{
     "name": "Mac",
-    "personal": 0,
-    "friends": 3
+    "personal": 1,
+    "friends": 10
   },{
     "name": "Apple Display",
-    "personal": 0,
-    "friends": 4
+    "personal": 1,
+    "friends": 5
   },{
     "name": "iPad",
-    "personal": 0,
-    "friends": 6
+    "personal": 1,
+    "friends": 10
   },{
     "name": "iPhone",
-    "personal": 0,
-    "friends": 0
+    "personal": 1,
+    "friends": 10
   },{
     "name": "Apple Watch",
-    "personal": 0,
-    "friends": 4
+    "personal": 1,
+    "friends": 10
   },{
     "name": "Apple Vision Pro",
     "personal": 1,
@@ -34,7 +34,7 @@
   },{
     "name": "AirPods (includes AirPods Pro)",
     "personal": 0,
-    "friends": 7
+    "friends": 10
   },{
     "name": "AirPods Max",
     "personal": 1,
@@ -46,11 +46,11 @@
   },{
     "name": "AirTag (4 pack)",
     "personal": 1,
-    "friends": 2
+    "friends": 5
   },{
     "name": "Apple accessories (includes Beats products)",
-    "personal": 8,
-    "friends": 8
+    "personal": 10,
+    "friends": 10
   },{
     "name": "Apple Watch Accessories (includes bands and chargers)",
     "personal": 10,
