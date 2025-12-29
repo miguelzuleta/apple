@@ -1,0 +1,67 @@
+{
+  "items": [{
+    "name": "Mac",
+    "personal": 0,
+    "friends": 9
+  },{
+    "name": "Apple Display",
+    "personal": 1,
+    "friends": 5
+  },{
+    "name": "iPad",
+    "personal": 1,
+    "friends": 10
+  },{
+    "name": "iPhone",
+    "personal": 1,
+    "friends": 10
+  },{
+    "name": "Apple Watch",
+    "personal": 1,
+    "friends": 10
+  },{
+    "name": "Apple Vision Pro",
+    "personal": 1,
+    "friends": 10
+  },{
+    "name": "Apple TV",
+    "personal": 5,
+    "friends": 10
+  },{
+    "name": "HomePod (includes HomePod mini)",
+    "personal": 5,
+    "friends": 10
+  },{
+    "name": "AirPods (includes AirPods Pro)",
+    "personal": 0,
+    "friends": 10
+  },{
+    "name": "AirPods Max",
+    "personal": 1,
+    "friends": 10
+  },{
+    "name": "AirTag (1 pack)",
+    "personal": 10,
+    "friends": 10
+  },{
+    "name": "AirTag (4 pack)",
+    "personal": 1,
+    "friends": 5
+  },{
+    "name": "Apple accessories (includes Beats products)",
+    "personal": 10,
+    "friends": 10
+  },{
+    "name": "Apple Watch Accessories (includes bands and chargers)",
+    "personal": 10,
+    "friends": 10
+  },{
+    "name": "Apple Vision Pro accessories",
+    "personal": 10,
+    "friends": 10
+  },{
+    "name": "Third-party accessories",
+    "personal": 10,
+    "friends": 10
+  }]
+}
