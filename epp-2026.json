@@ -14,7 +14,7 @@
   },{
     "name": "iPhone",
     "personal": 0,
-    "friends": 3
+    "friends": 2
   },{
     "name": "Apple Watch",
     "personal": 1,
@@ -37,7 +37,7 @@
     "friends": 10
   },{
     "name": "AirPods Max",
-    "personal": 1,
+    "personal": 0,
     "friends": 10
   },{
     "name": "AirTag (1 pack)",
