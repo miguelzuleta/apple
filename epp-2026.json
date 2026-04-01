@@ -2,7 +2,7 @@
   "items": [{
     "name": "Mac",
     "personal": 0,
-    "friends": 7
+    "friends": 6
   },{
     "name": "Apple Display",
     "personal": 1,
@@ -34,7 +34,7 @@
   },{
     "name": "AirPods (includes AirPods Pro)",
     "personal": 0,
-    "friends": 10
+    "friends": 9
   },{
     "name": "AirPods Max",
     "personal": 0,
