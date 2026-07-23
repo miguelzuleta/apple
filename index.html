@@ -4,11 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#ffffff">
+	<meta name="color-scheme" content="light">
 	<title>Discounts</title>
 	<style>
 		*, *:before, *:after {
 		  margin: 0;
 		  padding: 0;
+		}
+
+		html {
+		  background-color: #000;
 		}
 
 		body {
@@ -106,7 +111,7 @@
 						<p class="product">${elem.name}</p>
 						${Object.keys(specs).map(key => {
 							let itemGone = (elem[key] === 0) ? ' gone' : '';
-							return `<div class="count${itemGone}">${specs[key]}</div>`;
+							return `<div class="count${itemGone}">1-${specs[key]}</div>`;
 						}).join('')}
 					</div>
 				`;
