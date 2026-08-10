@@ -84,17 +84,27 @@
 	<script src="https://miguelzuleta.com/append/index.js"></script>
 	<script>
 		let year = new Date().getFullYear();
-		
-		fetch(`epp-${year}.json`).then(data => data.json()).then(data => {
-			let productList = '';
 
-			data.items.forEach(elem => {
+		let discountData = {
+			2026: '1J_xP2QIh5kT4E4KiTy1CVS5UKXVFtmVdOx5Yky7a-bs',
+			2027: ''
+		}
+
+		let spreadsheet = `https://docs.google.com/spreadsheets/d/${discountData[year]}/export?format=csv`;
+
+		fetch(spreadsheet).then(data => data.text()).then(data => {
+			let productList = '';
+			let linkData = data.split(/\r?\n/);
+
+			linkData.forEach(elem => {
+				let strData = elem.split(',');
+				
 				let specs = {
-					personal: elem.personal,
-					friends: elem.friends
+					personal: strData[1],
+					friends: strData[2]
 				}
 
-				let allGone = (specs.personal === 0) && (specs.friends === 0);
+				let allGone = (specs.personal == 0) && (specs.friends == 0);
 
 				if (allGone) {
 					specs.personal = 'Sold Out';
@@ -103,10 +113,9 @@
 
 				productList += `
 					<div class="row${allGone ? ' gone' : ''}">
-						<p class="product">${elem.name}</p>
+						<p class="product">${strData[0]}</p>
 						${Object.keys(specs).map(key => {
-							let itemGone = (elem[key] === 0) ? ' gone' : '';
-							return `<div class="count${itemGone}">${specs[key]}</div>`;
+							return `<div class="count">${specs[key]}</div>`
 						}).join('')}
 					</div>
 				`;
