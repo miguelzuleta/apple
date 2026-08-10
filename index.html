@@ -17,7 +17,7 @@
 		  justify-content: center;
 		}
 
-		#epp {
+		#discounts {
 		  background-color: #fff;
 		  padding: 12px 25px;
 		  width: 600px;
@@ -53,7 +53,7 @@
 		  top: 0;
 		}
 
-		.row.gone .count {
+		.row.sold-out .count {
 		  flex-grow: 1;
 		}
 		
@@ -66,14 +66,14 @@
 		  text-align: center;
 		}
 
-		.gone *,
-		.gone {
+		.sold-out *,
+		.sold-out {
 		  color: #bbb;
 		}
 	</style>
 </head>
 <body>
-	<section id="epp">
+	<section id="discounts">
 		<div class="row header">
 			<div class="product">Product Discount</div>
 			<div class="count">25%</div>
@@ -92,35 +92,35 @@
 		let spreadsheet = `https://docs.google.com/spreadsheets/d/${discountData[year]}/export?format=csv`;
 
 		fetch(spreadsheet).then(data => data.text()).then(data => {
-			let productList = '';
-			let linkData = data.split(/\r?\n/);
+			let discountList = '';
+			let discountRows = data.split(/\r?\n/);
 
-			linkData.forEach(elem => {
-				let strData = elem.split(',');
+			discountRows.forEach(row => {
+				let rowData = row.split(',');
 				
-				let specs = {
-					personal: strData[1],
-					friends: strData[2]
+				let discountType = {
+					personal: rowData[1],
+					friends: rowData[2]
 				}
 
-				let allGone = (specs.personal == 0) && (specs.friends == 0);
+				let soldOut = (discountType.personal == 0) && (discountType.friends == 0);
 
-				if (allGone) {
-					specs.personal = 'Sold Out';
-					delete specs.friends;
+				if (soldOut) {
+					discountType.personal = 'Sold Out';
+					delete discountType.friends;
 				}
 
-				productList += `
-					<div class="row${allGone ? ' gone' : ''}">
-						<p class="product">${strData[0]}</p>
-						${Object.keys(specs).map(key => {
-							return `<div class="count">${specs[key]}</div>`
+				discountList += `
+					<div class="row${soldOut ? ' sold-out' : ''}">
+						<p class="product">${rowData[0]}</p>
+						${Object.keys(discountType).map(key => {
+							return `<div class="count">${discountType[key]}</div>`
 						}).join('')}
 					</div>
 				`;
 			})
 
-			append('#epp', productList);
+			append('#discounts', discountList);
 		})
 	</script>
 </body>
