@@ -17,6 +17,12 @@
 		  justify-content: center;
 		}
 
+		.loading {
+			text-transform: uppercase;
+			padding-block: 20px;
+			text-align: center;
+}
+
 		#discounts {
 			--padding: 12px;
 			
@@ -75,12 +81,14 @@
 
 		/* Creates a solid bar at the bottom for Safari to sample */
 .safari-bottom-shim {
+	--color-offset: 4px;
+	
   position: fixed;
-  bottom: -257px; /* Pushes it just slightly out of view */
+  bottom: calc(var(--color-offset) * -1); /* Pushes it just slightly out of view */
   left: 0;
   width: 100%;
-  height: 255px; /* Must be at least 3px tall to trigger sampling */
-  background-color: #0f172a; /* Your desired solid color */
+  height: var(--color-offset); /* Must be at least 3px tall to trigger sampling */
+  background-color: red; /* Your desired solid color */
   opacity: 1; /* MUST be exactly 1 to turn off transparency */
   z-index: 9999;
 }
@@ -89,15 +97,11 @@
 </head>
 <body>
 	<div class="safari-bottom-shim"></div>
-	<section id="discounts">
-		<div class="row header">
-			<div class="product">Product Discount</div>
-			<div class="count">25%</div>
-			<div class="count">15%</div>
-		</div>
-	</section>
+	<section id="discounts"></section>
 	<script src="https://miguelzuleta.com/append/index.js"></script>
 	<script>
+		append('#discounts', `<p class="loading" bb-label="loading">loading...</p>`);
+		
 		let year = new Date().getFullYear();
 
 		let discountData = {
@@ -108,7 +112,13 @@
 		let spreadsheet = `https://docs.google.com/spreadsheets/d/${discountData[year]}/export?format=csv`;
 
 		fetch(spreadsheet).then(data => data.text()).then(data => {
-			let discountList = '';
+			let discountList = `
+				<div class="row header">
+					<div class="product">Product Discount</div>
+					<div class="count">25%</div>
+					<div class="count">15%</div>
+				</div>
+			`;
 			let discountRows = data.split(/\r?\n/);
 
 			discountRows.forEach(row => {
@@ -136,6 +146,7 @@
 				`;
 			})
 
+			window.appended.loading.remove();
 			append('#discounts', discountList);
 		})
 	</script>
