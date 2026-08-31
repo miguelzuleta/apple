@@ -79,22 +79,32 @@
 		  color: #bbb;
 		}
 
-		/* Creates a solid bar at the bottom for Safari to sample */
-		.safari-bottom-shim {
-			/* --color-offset: 4px; */
-			
+		/* .safari-bottom-shim {
 		  position: fixed;
-		  bottom: 0px; /* Pushes it just slightly out of view */
+		  bottom: 0px;
 		  left: 0;
 		  width: 100%;
-		  height: 15px; /* Must be at least 3px tall to trigger sampling */
-		  background-color: red; /* Your desired solid color */
-		  opacity: 1; /* MUST be exactly 1 to turn off transparency */
+		  height: 15px;
+		  background-color: red;
+		  opacity: 1;
 		  z-index: 9999;
-			animation: test 0.2s linear forwards;
+			animation: test 1s linear forwards;
+		} */
+
+		.safari-bottom-shim:after {
+			content: '';
+		  position: fixed;
+		  bottom: 0px;
+		  left: 0;
+		  width: 100%;
+		  height: 15px;
+		  background-color: gray;
+		  opacity: 1;
+		  z-index: 9999;
+			animation: bottom-shim 0.1s linear forwards;
 		}
 
-		@keyframes test {
+		@keyframes bottom-shim {
 			from {
 				bottom: 0px;
 			}
