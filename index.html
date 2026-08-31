@@ -79,32 +79,37 @@
 		  color: #bbb;
 		}
 
-		.safari-bottom-shim {
-		  position: fixed;
-		  bottom: 0px;
-		  left: 0;
-		  width: 100%;
-		  height: 15px;
-		  background-color: red;
-		  opacity: 1;
+		.safari-shim {
+			position: fixed;
+			left: 0;
+			width: 100%;
+			height: 15px;
+			background-color: magenta;
+			opacity: 1;
 		  z-index: 9999;
-			animation: bottom-shim 1s linear forwards;
 		}
 
-		/* .safari-bottom-shim:after {
-			content: '';
-		  position: fixed;
-		  bottom: 0px;
-		  left: 0;
-		  width: 100%;
-		  height: 15px;
-		  background-color: gray;
-		  opacity: 1;
-		  z-index: 9999;
-			animation: bottom-shim 1s linear forwards;
-		} */
+		.safari-shim.top {
+		  top: 0px;
+			animation: anim-shim-top 1s linear forwards;
+		}
 
-		@keyframes bottom-shim {
+		.safari-shim.bottom {
+		  bottom: 0px;
+			animation: anim-shim-bottom 1s linear forwards;
+		}
+
+		@keyframes anim-shim-top {
+			from {
+				top: 0px;
+			}
+
+			to {
+				top: -15px;
+			}
+		}
+
+		@keyframes anim-shim-bottom {
 			from {
 				bottom: 0px;
 			}
@@ -117,7 +122,8 @@
 	</style>
 </head>
 <body>
-	<div class="safari-bottom-shim"></div>
+	<div class="safari-shim top"></div>
+	<div class="safari-shim bottom"></div>
 	<section id="discounts"></section>
 	<script src="https://miguelzuleta.com/append/index.js"></script>
 	<script>
